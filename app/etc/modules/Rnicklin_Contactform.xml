@@ -1,0 +1,8 @@
+<config>
+  <modules>
+    <Rnicklin_Contactform>
+      <active>true</active>
+      <codePool>local</codePool>
+    </Rnicklin_Contactform>
+  </modules>
+</config>

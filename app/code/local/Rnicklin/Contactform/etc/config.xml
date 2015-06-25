@@ -1,0 +1,88 @@
+<config>
+    <modules>
+        <Rnicklin_Contactform>
+            <version>1.0</version>
+        </Rnicklin_Contactform>
+    </modules>
+    <global>
+        <blocks>
+            <contactform>
+                <class>Rnicklin_Contactform_Block</class>
+            </contactform>
+        </blocks>
+
+        <helpers>
+            <contactform>
+                <class>Rnicklin_Contactform_Helper</class>
+            </contactform>
+        </helpers>
+        <template>
+            <email>
+                <contactform_email_template translate="label" module="contactform">
+                    <label>Contact Form</label>
+                    <file>contactform.html</file>
+                    <type>text</type>
+                </contactform_email_template>
+            </email>
+        </template>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <Rnicklin_Contactform>
+                    <file>rnicklin_contactform.xml</file>
+                </Rnicklin_Contactform>
+            </updates>
+        </layout>
+        <routers>
+            <contactform>
+                <use>standard</use>
+                <args>
+                    <module>Rnicklin_Contactform</module>
+                    <frontName>contactform</frontName>
+                </args>
+            </contactform>
+        </routers>
+    </frontend>
+    <menu>
+        <contactform translate="title" module="contactform_contactform">
+            <title>Contact Form</title>
+            <sort_order>1</sort_order>
+            <children>
+                <submissions>
+                    <title>Submissions</title>
+                    <sort_order>1</sort_order>
+                    <action>adminhtml/contactform/index</action>
+                </submissions>
+            </children>
+        </contactform>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <contactform translate="title" module="contactform_contactform">
+                        <title>Top Level Contact Form Menu Item</title>
+                        <sort_order>1</sort_order>
+                        <children>
+                            <submissions>
+                                <title>Submissions Menu Item</title>
+                            </submissions>
+                        </children>
+                    </contactform>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Contactform_Contactform after="Mage_Adminhtml">Contacform_Contactform</Contactform_Contactform>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

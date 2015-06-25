@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+    <contactform_form_index>
+        <update handle="customer_account"/>
+        <reference name="head">
+            <action method="setTitle"><title>Custom Contact Form</title></action>
+        </reference>
+        <reference name="content">
+            <block type="contactform/form" name="contactform_form" template="rnicklin_contactform/form.phtml" />
+        </reference>
+    </contactform_form_index>
+
+</layout>

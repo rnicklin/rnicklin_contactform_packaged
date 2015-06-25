@@ -1,0 +1,25 @@
+<div class="contactform">
+    <form method="post" action="<?php echo $this->getUrl('contactform/form/index'); ?>">
+        <label for="name" class="required"><em>*</em><?php echo Mage::helper('contactform')->__('Name') ?></label>
+        <div class="input-box">
+            <input type="text" name="name" value="" />
+        </div>
+        <label for="name" class="required"><em>*</em><?php echo Mage::helper('contactform')->__('Email') ?></label>
+        <div class="input-box">
+            <input type="text" name="email" value="" />
+        </div>
+        <label for="name" class="required"><em>*</em><?php echo Mage::helper('contactform')->__('Phone') ?></label>
+        <div class="input-box">
+            <input type="text" name="phone" value="" />
+        </div>
+        <label for="name" class="required"><em>*</em><?php echo Mage::helper('contactform')->__('Message') ?></label>
+        <div class="input-box">
+            <textarea rows="5" name="comment"></textarea>
+        </div>
+        <div class="buttons-set">
+            <p class="required"><?php echo Mage::helper('contactform')->__('* Required Fields') ?></p>
+            <input type="text" name="hideit" id="hideit" value="" style="display:none !important;" />
+            <button type="submit" title="<?php echo Mage::helper('contactform')->__('Submit') ?>" class="button"><span><span><?php echo Mage::helper('contactform')->__('Submit') ?></span></span></button>
+        </div>
+    </form>
+</div>
